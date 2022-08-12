@@ -1,4 +1,9 @@
 
+:root{
+    --fav-color: rgb(141, 223, 255);
+    --header-background-color: rgb(19, 19, 19);
+}
+/* var (favcolor, rgb(141, 223, 255)); */
 
 *{
     margin: 0px; 
@@ -14,8 +19,8 @@ header{
     align-items: center;
     width: 100%; 
     height: 50px; 
-    background-color: rgb(19, 19, 19);
-    color: rgb(141, 223, 255); 
+    background-color: var(--header-background-color);
+    color: var(--fav-color); 
     position:fixed;
     top:0px; 
 
@@ -26,6 +31,7 @@ header{
     text-transform: uppercase;
     word-spacing: 5px;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 nav{
     width: 35%;
@@ -49,7 +55,7 @@ nav ul{
 
 nav ul li a{
     padding: 10px; 
-    color: rgb(141, 223, 255); 
+    color: var(--fav-color); 
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -58,13 +64,17 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: black;
-    background-color: rgb(141, 223, 255); 
-    box-shadow: inline 1px 1px rgb(141, 223, 255);;
+    color: var(--header-background-color);
+    background-color: var(--fav-color); 
+    box-shadow: 1px 1px var(--fav-color) inset;
     font-weight: bold;
     letter-spacing: 1px;
     cursor: pointer;
     font-size: 17px;
+}
+
+#nav-item1:hover{
+    border-radius: 10px 0px 0px 10px;
 }
 
 
@@ -78,9 +88,42 @@ nav ul li a:hover{
 
 
 #mainpage{
-    padding: 10px;
+    padding: 5px;
+    padding-top: 0px;
     margin-top: 50px; 
+    background-color: var(--header-background-color);
+    /* background-image: linear-gradient(180deg, var(--header-background-color), var(--fav-color)); */
+}
 
+#sections{
+    display: flex; 
+    flex-direction: column;
+    padding: 50px; 
+    background-image: linear-gradient(180deg, var(--header-background-color), var(--fav-color));
+    /* background: -webkit-linear-gradient(var(--fav-color), var(--header-background-color)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  */
+}
 
+.section{
+    margin: 30px;
+    background-color: rgb(94, 94, 94);
+    padding: 20px;
+    /* border: 1px solid black; */
+    /* color: calc(background-color - var*(--fav-color)); */
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.section h1{
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section hr{
+    border: 1px solid rgb(141, 223, 255);
+    width: 50%;
 }
 
