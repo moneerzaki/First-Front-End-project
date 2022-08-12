@@ -1,5 +1,10 @@
 
 :root{
+
+
+    /* --fav-color: #537895;
+    --header-background-color: #09203f; */
+    
     --fav-color: rgb(141, 223, 255);
     --header-background-color: rgb(19, 19, 19);
 }
@@ -9,6 +14,9 @@
     margin: 0px; 
     padding: 0px; 
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Tiro Gurmukhi', serif;
 }
 
 
@@ -34,7 +42,9 @@ header{
     cursor: pointer;
 }
 nav{
+
     width: 35%;
+    max-width: 300px; 
     /* background-color: red; */
     display: flex; 
     justify-content: space-between;
@@ -60,22 +70,31 @@ nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0px -1px 0px 0px var(--fav-color);
+
+
     transition: ease-out 0.2s;
 }
 
 nav ul li a:hover{
     color: var(--header-background-color);
-    background-color: var(--fav-color); 
-    box-shadow: 1px 1px var(--fav-color) inset;
+    /* background-color: var(--fav-color);  */
+    /* box-shadow: inset 0px -1px 0px 0px var(--fav-color); */
+    box-shadow: inset 0px -100px 0px 0px var(--fav-color) ;
     font-weight: bold;
     letter-spacing: 1px;
     cursor: pointer;
     font-size: 17px;
+    
 }
 
-#nav-item1:hover{
-    border-radius: 10px 0px 0px 10px;
+nav ul li:first-child a:hover{
+    border-radius:10px 0px 0px 10px; 
 }
+nav ul li:last-child a:hover{
+    border-radius:0px 10px 10px 0px; 
+}
+
 
 
 /* #nav-items{
@@ -99,16 +118,28 @@ nav ul li a:hover{
     display: flex; 
     flex-direction: column;
     padding: 50px; 
-    background-image: linear-gradient(180deg, var(--header-background-color), var(--fav-color));
+    background-image: linear-gradient(180deg,  var(--fav-color), var(--header-background-color));
     /* background: -webkit-linear-gradient(var(--fav-color), var(--header-background-color)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  */
 }
 
+#sections .section:first-child{
+    border-radius: 50px 50px 0px 0px;
+    /* background-color: rgb(255, 255, 255); */
+}
+#sections .section:last-child{
+    border-radius: 0px 0px 50px 50px;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+
+
 .section{
     margin: 30px;
-    background-color: rgb(94, 94, 94);
+    background-color: rgb(94, 94, 94, 0.3);
     padding: 20px;
+
     /* border: 1px solid black; */
     /* color: calc(background-color - var*(--fav-color)); */
     /* background: -webkit-linear-gradient(#eee, #333); */
@@ -116,14 +147,24 @@ nav ul li a:hover{
     /* -webkit-text-fill-color: transparent; */
 }
 
+.section:hover{
+    background-color: rgb(94, 94, 94, 0.8);
+}
+
 .section h1{
+    font-size: 60px;
     letter-spacing: 3px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .section hr{
-    border: 1px solid rgb(141, 223, 255);
+    border: 1px solid var(--fav-color);
     width: 50%;
 }
 
+
+.section p{
+    font-size: 20px;
+    text-indent: 50px;
+}
