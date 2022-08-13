@@ -140,6 +140,7 @@ nav ul li:last-child a:hover{
     background-color: rgb(94, 94, 94, 0.3);
     padding: 20px;
 
+
     /* border: 1px solid black; */
     /* color: calc(background-color - var*(--fav-color)); */
     /* background: -webkit-linear-gradient(#eee, #333); */
@@ -148,7 +149,7 @@ nav ul li:last-child a:hover{
 }
 
 .section:hover{
-    background-color: rgb(94, 94, 94, 0.8);
+    /* background-color: rgb(94, 94, 94, 0.8); */
 }
 
 .section h1{
