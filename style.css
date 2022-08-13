@@ -117,7 +117,8 @@ nav ul li:last-child a:hover{
 #sections{
     display: flex; 
     flex-direction: column;
-    padding: 50px; 
+    /* padding: 50px;  */
+    /* width: 80%; */
     background-image: linear-gradient(180deg,  var(--fav-color), var(--header-background-color));
     /* background: -webkit-linear-gradient(var(--fav-color), var(--header-background-color)); 
     -webkit-background-clip: text;
@@ -136,9 +137,12 @@ nav ul li:last-child a:hover{
 
 
 .section{
-    margin: 30px;
+    /* margin: 30px; */
     background-color: rgb(94, 94, 94, 0.3);
     padding: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
 
 
     /* border: 1px solid black; */
@@ -148,24 +152,43 @@ nav ul li:last-child a:hover{
     /* -webkit-text-fill-color: transparent; */
 }
 
+
+
+
 .section:hover{
-    /* background-color: rgb(94, 94, 94, 0.8); */
+    background-color: rgb(94, 94, 94, 0.8);
 }
 
 .section h1{
     font-size: 60px;
     letter-spacing: 3px;
     font-weight: bold;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .section hr{
     border: 1px solid var(--fav-color);
     width: 50%;
+    margin-top: 15px; 
+    margin-bottom: 20px;
 }
 
 
 .section p{
     font-size: 20px;
     text-indent: 50px;
+}
+
+
+
+
+.section_even{
+    text-align: right;
+}
+.section_even hr{
+    /* border: 1px solid black;  */
+    width: 50%;
+    margin-left: auto;
+    /* position: relative; */
+    /* float: right; */
 }
