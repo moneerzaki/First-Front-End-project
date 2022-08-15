@@ -123,6 +123,8 @@ section4Nav.addEventListener('click', () => {
 })
 
 
+
+// function to highlight the current section in the nav bar. 
 document.addEventListener('scroll', () => {
     if (window.scrollY > sec4dim.top)
     {
@@ -158,10 +160,7 @@ document.addEventListener('scroll', () => {
 
 
 // for right text alignment for all even sections. 
-// var section2 = document.querySelector('#section2');
 section2.classList.add('section_even');
-
-// var section4 = document.querySelector('#section4');
 section4.classList.add('section_even');
 
 
