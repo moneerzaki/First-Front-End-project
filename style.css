@@ -65,7 +65,7 @@ nav ul{
     font-size: 15px;
 }
 
-nav ul li a{
+nav ul li{
     padding: 10px; 
     color: var(--fav-color); 
     text-decoration: none;
@@ -78,7 +78,7 @@ nav ul li a{
     transition: ease-out 0.2s;
 }
 
-nav ul li a:hover{
+nav ul li:hover{
     color: var(--header-background-color);
     /* background-color: var(--fav-color);  */
     /* box-shadow: inset 0px -1px 0px 0px var(--fav-color); */
@@ -90,10 +90,10 @@ nav ul li a:hover{
     
 }
 
-nav ul li:first-child a{
+nav ul li:first-child{
     border-radius:10px 0px 0px 10px; 
 }
-nav ul li:last-child a{
+nav ul li:last-child{
     border-radius:0px 10px 10px 0px; 
 }
 
