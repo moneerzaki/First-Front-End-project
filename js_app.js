@@ -11,16 +11,6 @@ var lorem1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ill
 
 
 
-section1Nav.addEventListener('click', () => {
-    window.scrollTo(
-        {section1, behavior: 'smooth'}
-    );
-})
-section2Nav.addEventListener('click', () => {
-    window.scrollTo(
-        {section2, behavior: 'smooth'}
-    );
-})
 
 
 
@@ -40,11 +30,7 @@ console.log(section3Nav);
 
 
 
-section3Nav.addEventListener('click', () => {
-    window.scrollTo(
-        {section3, behavior: 'smooth'}
-    );
-})
+
 
 
 
@@ -89,11 +75,7 @@ navitems.appendChild(section4Nav);
 console.log(section4Nav);
 
 
-section4Nav.addEventListener('click', () => {
-    window.scrollTo(
-        {section4, behavior: 'smooth'}
-    );
-})
+
 
 //  creating a new section4 in the main page. 
 var section4header = document.createElement('h1');      // h1
@@ -133,6 +115,26 @@ var sec1dim = section1.getBoundingClientRect();
 var sec2dim = section2.getBoundingClientRect();
 var sec3dim = section3.getBoundingClientRect();
 var sec4dim = section4.getBoundingClientRect();
+
+
+section1Nav.addEventListener('click', () => {
+    window.scrollTo({sec1dim,
+                     behavior: 'smooth'});
+})
+section2Nav.addEventListener('click', () => {
+    window.scrollTo({sec2dim,
+                     behavior: 'smooth'});
+})
+section3Nav.addEventListener('click', () => {
+    window.scrollTo({sec3dim,
+                     behavior: 'smooth'});
+})
+section4Nav.addEventListener('click', () => {
+    window.scrollTo({sec4dim,
+                     behavior: 'smooth'});
+})
+
+
 document.addEventListener('scroll', () => {
     if (window.scrollY < sec4dim.bottom && window.scrollY > sec4dim.top)
     {
@@ -168,7 +170,7 @@ document.addEventListener('scroll', () => {
 
 
 // for right text alignment for all even sections. 
-var section2 = document.querySelector('#section2');
+// var section2 = document.querySelector('#section2');
 section2.classList.add('section_even');
 
 // var section4 = document.querySelector('#section4');
