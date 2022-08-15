@@ -1,3 +1,6 @@
+# Project title: 
+First Front-End Project (EGYFWD)
+
 # Project description: 
 This project builds a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page.
 
@@ -14,22 +17,13 @@ JS
 VS code. 
 
 ## Used extension: 
-HTMl CSS Support
-HTML Snippets 
-JavaScript (ES6) code snippets. 
-Node.js Modules Intellisense. 
-live Server
-Prettier - Code formatter
+HTMl CSS Support, HTML Snippets, JavaScript (ES6) code snippets, Node.js Modules Intellisense, live Server, Prettier - Code formatter.
 
 ## Used Search Engine: 
-Microsoft Edge. 
-Google Chrome. 
+Microsoft Edge, Google Chrome. 
     
 ## Searching Bugs and additional options websites used: 
-MDN 
-Youtube
-stackoverflow
-stackexchange
+MDN, Youtube, Stackoverflow, Stackexchange.
     
 
 
