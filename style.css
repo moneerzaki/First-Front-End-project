@@ -23,6 +23,7 @@
 
 
 header{
+
     display: flex; 
     flex-direction: row; 
     justify-content: space-around;
@@ -33,7 +34,6 @@ header{
     color: var(--fav-color); 
     position:fixed;
     top:0px; 
-
 }
 
 #logo{

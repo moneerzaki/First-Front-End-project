@@ -1,13 +1,14 @@
-# Project: Investigate a Dataset - ٍSoccer Matches
-
 ## Table of Contents
 <ul>
-<li><a href="#intro">Introduction</a></li>
-<li><a href="#wrangling">Data Wrangling</a></li>
-<li><a href="#eda">Exploratory Data Analysis</a></li>
-<li><a href="#conclusions">Conclusions</a></li>
+    <li><a href="#protitle">Project title</a></li>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#prodesc"> Project Description</a></li>
+    <li><a href="#Usage"> Usage </a></li>
 </ul>
 
+
+<a id='protitle'></a>
 
 # Project title: 
 First Front-End Project (EGYFWD)
@@ -31,7 +32,7 @@ VS code.
 ## Used extension: 
 HTMl CSS Support, HTML Snippets, JavaScript (ES6) code snippets, Node.js Modules Intellisense, live Server, Prettier - Code formatter.
 
-## Used Search Engine: 
+## Used Search-Engine: 
 Microsoft Edge, Google Chrome. 
     
 ## Searching Bugs and additional options websites used: 
