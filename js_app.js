@@ -1,5 +1,6 @@
 
 // colors. 
+var headerHeight = '10vh'; 
 var favColor = '#8ddfff';
 var headerBackgroundColor = '#131313';
 var highlightNavItem = '#808080';
@@ -100,27 +101,52 @@ var sec3dim = section3.getBoundingClientRect();
 var sec4dim = section4.getBoundingClientRect();
 
 
+
+// printing the formed html on the console to make sure every thing is ok. 
 console.log(section1Nav);
 console.log(section2Nav);
 console.log(section3Nav);
 console.log(section4Nav);
 
+
+
+
+// scrolling to a specific section when clicking on it in the nav bar. 
 section1Nav.addEventListener('click', () => {
+    // let diff = Math.abs(window.scrollY - sec1dim.top) + 100;
+    // window.scrollBy(0,-diff);
+
+    // window.scrollTo({top: sec1dim.top -100});
+    // console.log(diff); 
     // location.href = "#section1";
     section1.scrollIntoView();
 })
 section2Nav.addEventListener('click', () => {
+    // let diff = window.scrollY - sec2dim.top + 100;
+    // window.scrollBy(0,-diff);
+
+    // window.scrollTo({top: sec2dim.top -100});
     // location.href = "#section2";
     section2.scrollIntoView();
 })
 section3Nav.addEventListener('click', () => {
+    // let diff = window.scrollY - sec3dim.top + 100;
+    // window.scrollBy(0,-diff);
+
+    // window.scrollTo({top: sec3dim.top -100});
     // location.href = "#section3";
     section3.scrollIntoView();
 })
 section4Nav.addEventListener('click', () => {
+    // let diff = window.scrollY - sec4dim.top + 100;
+    // window.scrollBy(0,-diff);
+
+    // window.scrollTo({top: sec4dim.top });
     // location.href = "#section4";
     section4.scrollIntoView();
 })
+
+
 
 
 
