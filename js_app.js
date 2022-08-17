@@ -1,9 +1,10 @@
+/* eslint quotes: ["error", "double"] */
 
 // colors. 
-var headerHeight = '10vh'; 
-var favColor = '#8ddfff';
-var headerBackgroundColor = '#131313';
-var highlightNavItem = '#808080';
+// var headerHeight = '10vh'; 
+// var favColor = '#8ddfff';
+var headerBackgroundColor = "#131313";
+var highlightNavItem = "#808080";
 
 
 
@@ -14,26 +15,26 @@ var lorem1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ill
 
 
 
-
+/*global document, console, window*/
 
 // creating a new section 3 in the nav bar. 
-var section3Nav = document.createElement('li');         // li 3
-section3Nav.setAttribute('id','#nav-item3') ;
+var section3Nav = document.createElement("li");         // li 3
+section3Nav.setAttribute("id","#nav-item3") ;
 section3Nav.textContent =   "Sect 3";
 
 console.log(section3Nav);
 
 
 // creating a new section4 in the nav bar. 
-var section4Nav = document.createElement('li');         // li 4
-section4Nav.setAttribute('id','#nav-item4') ;
+var section4Nav = document.createElement("li");         // li 4
+section4Nav.setAttribute("id","#nav-item4") ;
 section4Nav.textContent =   "Sect 4";
 
 console.log(section4Nav);
 
 
 // appending nav items.
-var navitems = document.querySelector('#nav-items');    // nav items.
+var navitems = document.querySelector("#nav-items");    // nav items.
 navitems.appendChild(section3Nav);
 navitems.appendChild(section4Nav);
 
@@ -45,15 +46,15 @@ navitems.appendChild(section4Nav);
 
 
 //  creating a new section3 in the main page. 
-var section3header = document.createElement('h1');      // h1
+var section3header = document.createElement("h1");      // h1
 section3header.textContent = "Section 3:"
-var section3hr = document.createElement('hr');          // hr
-var section3p = document.createElement('p');            // p
+var section3hr = document.createElement("hr");          // hr
+var section3p = document.createElement("p");            // p
 section3p.textContent = lorem1 + lorem1 + lorem1 + lorem1 + lorem1 + lorem1; 
 
-var section3 = document.createElement('div');           // main div .section
-section3.className= 'section';
-section3.setAttribute('id', 'section3');
+var section3 = document.createElement("div");           // main div .section
+section3.className= "section";
+section3.setAttribute("id", "section3");
 
 section3.append(section3header, section3hr, section3p);
 
@@ -62,15 +63,15 @@ console.log(section3);
 
 
 //  creating a new section4 in the main page. 
-var section4header = document.createElement('h1');      // h1
+var section4header = document.createElement("h1");      // h1
 section4header.textContent = "Section 4:"
-var section4hr = document.createElement('hr');          // hr
-var section4p = document.createElement('p');            // p
+var section4hr = document.createElement("hr");          // hr
+var section4p = document.createElement("p");            // p
 section4p.textContent = lorem1 + lorem1 + lorem1 + lorem1 + lorem1 + lorem1 + lorem1 + lorem1 + lorem1 + lorem1; 
 
-var section4 = document.createElement('div');           // main div .section
-section4.className= 'section';
-section4.setAttribute('id',"section4");
+var section4 = document.createElement("div");           // main div .section
+section4.className= "section";
+section4.setAttribute("id","section4");
 
 section4.append(section4header, section4hr, section4p);
 
@@ -78,7 +79,7 @@ console.log(section4);
 
 
 // appending section 3 to the rest of sections. 
-var sections = document.querySelector('#sections');     // main div #sections
+var sections = document.querySelector("#sections");     // main div #sections
 sections.appendChild(section3);
 sections.appendChild(section4);
 
@@ -90,12 +91,12 @@ sections.appendChild(section4);
 
 
 // creating an element for the rest of nav sections. 
-var section1Nav = document.querySelector('#nav-item1');
-var section2Nav = document.querySelector('#nav-item2');
+var section1Nav = document.querySelector("#nav-item1");
+var section2Nav = document.querySelector("#nav-item2");
 
 // creating an element for the rest of the sections. 
-var section1 = document.querySelector('#section1');
-var section2 = document.querySelector('#section2');
+var section1 = document.querySelector("#section1");
+var section2 = document.querySelector("#section2");
 
 // highlighting nav item when its being represented in the window.
 var sec1dim = section1.getBoundingClientRect();
@@ -115,7 +116,7 @@ console.log(section4Nav);
 
 
 // scrolling to a specific section when clicking on it in the nav bar. 
-section1Nav.addEventListener('click', () => {
+section1Nav.addEventListener("click", () => {
     // let diff = Math.abs(window.scrollY - sec1dim.top) + 100;
     // window.scrollBy(0,-diff);
 
@@ -124,7 +125,7 @@ section1Nav.addEventListener('click', () => {
     // location.href = "#section1";
     section1.scrollIntoView();
 })
-section2Nav.addEventListener('click', () => {
+section2Nav.addEventListener("click", () => {
     // let diff = window.scrollY - sec2dim.top + 100;
     // window.scrollBy(0,-diff);
 
@@ -132,7 +133,7 @@ section2Nav.addEventListener('click', () => {
     // location.href = "#section2";
     section2.scrollIntoView();
 })
-section3Nav.addEventListener('click', () => {
+section3Nav.addEventListener("click", () => {
     // let diff = window.scrollY - sec3dim.top + 100;
     // window.scrollBy(0,-diff);
 
@@ -140,7 +141,7 @@ section3Nav.addEventListener('click', () => {
     // location.href = "#section3";
     section3.scrollIntoView();
 })
-section4Nav.addEventListener('click', () => {
+section4Nav.addEventListener("click", () => {
     // let diff = window.scrollY - sec4dim.top + 100;
     // window.scrollBy(0,-diff);
 
@@ -156,8 +157,8 @@ section4Nav.addEventListener('click', () => {
 
 
 // for right text alignment for all even sections. 
-section2.classList.add('section_even');
-section4.classList.add('section_even');
+section2.classList.add("section_even");
+section4.classList.add("section_even");
 
 
 
@@ -167,34 +168,34 @@ section4.classList.add('section_even');
 
 // collabsing the content of a section when clicking on its title. 
 // creating an element for each section header. 
-var section1header = document.querySelector('#section1 h1');
-var section2header = document.querySelector('#section2 h1');
+var section1header = document.querySelector("#section1 h1");
+var section2header = document.querySelector("#section2 h1");
 // creating an element for each section paragraph. 
-var section1p =  document.querySelector('#section1 p');
-var section2p =  document.querySelector('#section2 p');
+var section1p =  document.querySelector("#section1 p");
+var section2p =  document.querySelector("#section2 p");
 
-section1header.addEventListener('click',() =>{
+section1header.addEventListener("click",() =>{
     if (section1p.style.display == "none")
     {section1p.style.display = "block";}
     else 
     {section1p.style.display = "none";}
 })
 
-section2header.addEventListener('click',() =>{
+section2header.addEventListener("click",() =>{
     if (section2p.style.display == "none")
     {section2p.style.display = "block";}
     else 
     {section2p.style.display = "none";}
 })
 
-section3header.addEventListener('click',() =>{
+section3header.addEventListener("click",() =>{
     if (section3p.style.display == "none")
     {section3p.style.display = "block";}
     else 
     {section3p.style.display = "none";}
 })
 
-section4header.addEventListener('click',() =>{
+section4header.addEventListener("click",() =>{
     if (section4p.style.display == "none")
     {section4p.style.display = "block";}
     else 
@@ -206,7 +207,7 @@ section4header.addEventListener('click',() =>{
 
 //  Second Additional Feature: 
 // Highlight the current section in the nav bar. 
-document.addEventListener('scroll', () => {
+document.addEventListener("scroll", () => {
     if (window.scrollY > sec4dim.top)
     {
         section1Nav.style.backgroundColor = headerBackgroundColor;
@@ -241,11 +242,12 @@ document.addEventListener('scroll', () => {
 
 
 
+
 // third Additional Feature: 
 // hidding the navbar while scrolling down. 
 
-var header = document.querySelector('header');
-window.addEventListener('scroll', ()=>{
+var header = document.querySelector("header");
+window.addEventListener("scroll", ()=>{
     if (window.scrollY < 50)
     {header.style.backgroundColor = "black";}
     else if (window.scrollY > 50)
