@@ -86,6 +86,9 @@ sections.appendChild(section4);
 
 
 
+
+
+
 // creating an element for the rest of nav sections. 
 var section1Nav = document.querySelector('#nav-item1');
 var section2Nav = document.querySelector('#nav-item2');
@@ -150,7 +153,59 @@ section4Nav.addEventListener('click', () => {
 
 
 
-// function to highlight the current section in the nav bar. 
+
+
+// for right text alignment for all even sections. 
+section2.classList.add('section_even');
+section4.classList.add('section_even');
+
+
+
+
+// additional features: 
+// First additional features
+
+// collabsing the content of a section when clicking on its title. 
+// creating an element for each section header. 
+var section1header = document.querySelector('#section1 h1');
+var section2header = document.querySelector('#section2 h1');
+// creating an element for each section paragraph. 
+var section1p =  document.querySelector('#section1 p');
+var section2p =  document.querySelector('#section2 p');
+
+section1header.addEventListener('click',() =>{
+    if (section1p.style.display == "none")
+    {section1p.style.display = "block";}
+    else 
+    {section1p.style.display = "none";}
+})
+
+section2header.addEventListener('click',() =>{
+    if (section2p.style.display == "none")
+    {section2p.style.display = "block";}
+    else 
+    {section2p.style.display = "none";}
+})
+
+section3header.addEventListener('click',() =>{
+    if (section3p.style.display == "none")
+    {section3p.style.display = "block";}
+    else 
+    {section3p.style.display = "none";}
+})
+
+section4header.addEventListener('click',() =>{
+    if (section4p.style.display == "none")
+    {section4p.style.display = "block";}
+    else 
+    {section4p.style.display = "none";}
+})
+
+
+
+
+//  Second Additional Feature: 
+// Highlight the current section in the nav bar. 
 document.addEventListener('scroll', () => {
     if (window.scrollY > sec4dim.top)
     {
@@ -185,8 +240,14 @@ document.addEventListener('scroll', () => {
 
 
 
-// for right text alignment for all even sections. 
-section2.classList.add('section_even');
-section4.classList.add('section_even');
 
+// third Additional Feature: 
+// hidding the navbar while scrolling down. 
 
+var header = document.querySelector('header');
+window.addEventListener('scroll', ()=>{
+    if (window.scrollY < 50)
+    {header.style.backgroundColor = "black";}
+    else if (window.scrollY > 50)
+    {header.style.backgroundColor = "rgb(0,0,0,0)";}
+})
