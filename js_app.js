@@ -79,6 +79,10 @@ createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1);
 createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
 createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
 createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
+// createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
+// createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
+// createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
+// createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
 
 section =  document.querySelectorAll(".section");
 navitem =  document.querySelectorAll(".nav-item");

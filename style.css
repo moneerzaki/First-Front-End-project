@@ -49,11 +49,12 @@ header{
     cursor: pointer;
 }
 nav{
-
+    /* position: fixed; */
     width: 40%;
     max-width: 350px; 
     /* background-color: red; */
     display: flex; 
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -64,10 +65,24 @@ nav ul{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+    overflow:auto;
 
     list-style-type: none;
     font-size: 2.3vh;
+}
+
+::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 2px; 
+    background-color: var(--header-background-color);
+}
+::-webkit-scrollbar-track {
+    border-radius: 50%;
+    background-color: var(--header-background-color);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--fav-color);
 }
 
 .nav-item{
