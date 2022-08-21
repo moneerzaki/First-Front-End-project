@@ -6,8 +6,12 @@
     --header-background-color: #09203f; */
     --header-height: 10vh; 
     --header-font-size: var(--header-height)/2; 
-    --fav-color: #8ddfff;
-    --header-background-color: #131313;
+    --fav-color: hsl(197, 100%, 78%);
+    
+    --header-background-color1: hsl(0, 0%, 7%, 100%);
+    --header-background-color2: hsl(0, 0%, 7%, 0%);
+
+    --header-background-color: hsl(0, 0%, 7%);
     --highlight-nav-item: #808080;
 }
 /* var (favcolor, rgb(141, 223, 255)); */
@@ -19,7 +23,7 @@
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Tiro Gurmukhi', serif;
-    scroll-behavior:  smooth ;
+    scroll-behavior:  smooth;
 }
 
 
@@ -31,7 +35,8 @@ header{
     align-items: center;
     width: 100%; 
     height: var(--header-height); 
-    background-color: var(--header-background-color);
+    /* background-color: var(--header-background-color); */
+    background-image: linear-gradient(180deg,  var(--header-background-color1), var(--header-background-color2));
     color: var(--fav-color); 
     position:fixed;
     top:0px; 
@@ -148,6 +153,7 @@ nav ul li:last-child{
     flex-direction: column;
     padding-top: var(--header-height); 
     /* width: 80%; */
+
     background-image: linear-gradient(180deg,  var(--fav-color), var(--header-background-color));
     /* background: -webkit-linear-gradient(var(--fav-color), var(--header-background-color)); 
     -webkit-background-clip: text;
