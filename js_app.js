@@ -121,6 +121,8 @@ for (let i=0; i<numberOfSections; i++)
 
 }
 
+if (window.scrollY < 50)
+{header.style.backgroundColor = headerBackgroundColor;}
 
 
 //  Second Additional Feature: 
@@ -130,7 +132,7 @@ document.addEventListener("scroll", () => {
     // third Additional Feature: 
     // hidding the navbar while scrolling down. 
     if (window.scrollY < 50)
-    {header.style.backgroundColor = "black";}
+    {header.style.backgroundColor = headerBackgroundColor;}
     else if (window.scrollY > 50)
     {header.style.backgroundColor = "rgb(0,0,0,0)";}
 
