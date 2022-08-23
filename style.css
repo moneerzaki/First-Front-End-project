@@ -13,6 +13,8 @@
 
     --header-background-color: hsl(0, 0%, 7%);
     --highlight-nav-item: #808080;
+
+    --width-interactive-buttons: 4vw;
 }
 /* var (favcolor, rgb(141, 223, 255)); */
 
@@ -94,7 +96,9 @@ nav ul{
 }
 
 .nav-item{
+    min-width: 20%;
     padding: 10px; 
+    margin: 2px;
     color: var(--fav-color); 
     background-color: var(--header-background-color);
     text-decoration: none;
@@ -111,11 +115,12 @@ nav ul li:hover{
     color: var(--header-background-color);
     /* background-color: var(--fav-color);  */
     /* box-shadow: inset 0px -1px 0px 0px var(--fav-color); */
-    box-shadow: inset 0px -100px 0px 0px var(--fav-color) ;
+    box-shadow: inset 0px -150px 0px 0px var(--fav-color) ;
     font-weight: bold;
     letter-spacing: 1px;
     cursor: pointer;
-    font-size: 17px;
+    /* font-size: 17px; */
+    transform: scaleX(1.2) scaleY(1.1);
     
 }
 
@@ -173,6 +178,9 @@ nav ul li:last-child{
     /* background-color: rgb(255, 255, 255); */
 }
 
+
+#sections .section:nth-child(even)
+{text-align: right;}
 
 
 .section{
@@ -243,30 +251,44 @@ nav ul li:last-child{
     bottom: 10vh;
     right: 3vw;
 
-    height : 100px; 
-    width : 40px;
+    /* height : 100px; 
+    width : 40px; */
+    width: var(--width-interactive-buttons);
+    height: calc(var(--width-interactive-buttons)*2.5);
+    /* padding: calc(var(--width-interactive-buttons)/5); */
+    /* border: 1px solid black; */
     
 }
 
 .interbuttons button{
     border-radius: 50%;
-    font-size: 20px; 
+    font-size: calc(var(--width-interactive-buttons)/2); 
     background-color: var(--header-background-color);
     color: var(--fav-color);
     cursor: pointer;
     border: 1px solid white;
 
 
-    height: 40px; 
-    width: 40px;
+     
+    width: 100%;
+    height: var(--width-interactive-buttons);
+    /* margin: var(--width-interactive-buttons)/5; */
+    /* -webkit-box-reflect: below 0 linear-gradient( transparent, transparent, transparent, transparent, black); */
 
-    transition: 0.15s;
+    /* transform: rotateY(40deg); */
+    transition: 0.2s;
 }
 
 .interbuttons button:hover{
-    font-size: 30px;
-    height: 50px; 
-    width: 50px;
+    /* font-size: 40px; */
+    /* height: clac(var(--width-interactive-buttons)*1.5);  */
+    /* width: 120%; */
+    /* padding-top: 100%; */
+    /* transform: translateY(-10px); */
+    /* transform: rotateX(180deg); */
+    /* transform: rotateY(-40deg); */
+    /* transform: rotateZ(360deg); */
+    transform: scale(1.2 , 1.2);
 
 }
 #addsection{
@@ -275,4 +297,14 @@ nav ul li:last-child{
 
 #removesection{
 
+}
+
+
+
+
+@media (orientation: portrait)
+{
+    :root{
+        --width-interactive-buttons: 8vh;
+    }
 }

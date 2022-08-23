@@ -100,9 +100,6 @@ navitem =  document.querySelectorAll(".nav-item");
 
 for (let i=0; i<numberOfSections; i++)
 {
-    // for right text alignment for all even sections. 
-    if ( i%2 === 1)
-    {section[i].classList.add("section_even");}
 
     secdim.push(section[i].getBoundingClientRect());
 
@@ -110,7 +107,7 @@ for (let i=0; i<numberOfSections; i++)
     navitem[i].addEventListener("click", () => {
         // let diff = Math.abs(window.scrollY - sec1dim.top) + 100;
         // window.scrollBy(0,-diff);
-
+        
         // window.scrollTo({top: sec1dim.top -100});
         // console.log(diff); 
         // location.href = "#section1";
