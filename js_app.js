@@ -25,9 +25,19 @@ var sectionsMain = [];  // IDs of each section in the main page.
 var section;
 var secdim = [];
 
+// removing the last added section: 
+var removeLastSection = function ()
+{
+    numberOfSections--;
+    navitems.removeChild(navitems.lastChild);
+    navElements.pop();
 
 
+    sections.removeChild(sections.lastChild);
+    sectionsMain.pop();
+    secdim.pop();
 
+}
 // main function for creating a new section. 
 var createNewSection = function(textin)
 {
@@ -146,3 +156,19 @@ document.addEventListener("scroll", () => {
         }
     }
 });
+
+
+
+var addButton = document.querySelector('#addsection');
+var removeButton = document.querySelector('#removesection');
+
+addButton.addEventListener('click', () =>{
+    createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
+})
+
+removeButton.addEventListener('click', () =>{
+    if (numberOfSections == 0)
+    {window.alert("there is no sections to remove");}
+    else 
+    {removeLastSection(); }
+})

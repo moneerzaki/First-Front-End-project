@@ -19,12 +19,30 @@
 *{
     margin: 0px; 
     padding: 0px; 
-    box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Tiro Gurmukhi', serif;
-    scroll-behavior:  smooth;
+    box-sizing: border-box; 
+    font-family: 'Noto Sans', sans-serif; 
+    font-family: 'Poppins', sans-serif; 
+    font-family: 'Tiro Gurmukhi', serif; 
+    scroll-behavior:  smooth; 
 }
+
+
+
+
+::-webkit-scrollbar {
+    /* border-radius: 10px; */
+    height: 2px; 
+    background-color: var(--header-background-color);
+}
+::-webkit-scrollbar-track {
+    border-radius: 50%;
+    background-color: var(--header-background-color);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--fav-color);
+}
+
 
 
 header{
@@ -64,7 +82,6 @@ nav{
 }
 
 nav ul{
-    /* background-color: beige; */
     width: 100%;
     display: flex; 
     flex-direction: row;
@@ -76,23 +93,10 @@ nav ul{
     font-size: 2.3vh;
 }
 
-::-webkit-scrollbar {
-    border-radius: 10px;
-    height: 2px; 
-    background-color: var(--header-background-color);
-}
-::-webkit-scrollbar-track {
-    border-radius: 50%;
-    background-color: var(--header-background-color);
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: var(--fav-color);
-}
-
 .nav-item{
     padding: 10px; 
     color: var(--fav-color); 
+    background-color: var(--header-background-color);
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -227,4 +231,48 @@ nav ul li:last-child{
     margin-left: auto;
     /* position: relative; */
     /* float: right; */
+}
+
+
+.interbuttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 10vh;
+    right: 3vw;
+
+    height : 100px; 
+    width : 40px;
+    
+}
+
+.interbuttons button{
+    border-radius: 50%;
+    font-size: 20px; 
+    background-color: var(--header-background-color);
+    color: var(--fav-color);
+    cursor: pointer;
+    border: 1px solid white;
+
+
+    height: 40px; 
+    width: 40px;
+
+    transition: 0.15s;
+}
+
+.interbuttons button:hover{
+    font-size: 30px;
+    height: 50px; 
+    width: 50px;
+
+}
+#addsection{
+
+}
+
+#removesection{
+
 }
