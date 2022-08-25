@@ -37,6 +37,8 @@ var removeLastSection = function ()
     sectionsMain.pop();
     secdim.pop();
 
+    addAllFunctions();
+
 }
 // main function for creating a new section. 
 var createNewSection = function(textin)
@@ -60,7 +62,7 @@ var createSectionNavBar = function()
     // adding element id to the list of elements
     navElements.push(("nav-item"+numberOfSections));
 
-    console.log(sectionNav);
+    // console.log(sectionNav);
     return sectionNav;
 }
 // function to create the section main text in the main page.
@@ -80,28 +82,31 @@ var createSectionMainPage = function(textin)
 
     sectionsMain.push(("section"+numberOfSections));
 
-    console.log(section);
+    // console.log(section);
     return section;
 }
 
+
 // creating all web sections. 
-createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
-createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
-createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
-createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
+
+
 // createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
 // createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
 // createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
 // createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
+
+
+
+var addAllFunctions = function()
+{
 
 section =  document.querySelectorAll(".section");
 navitem =  document.querySelectorAll(".nav-item");
 
 
-for (let i=0; i<numberOfSections; i++)
-{
-
-    secdim.push(section[i].getBoundingClientRect());
+//for (let i=0; i<numberOfSections; i++)
+    var i = numberOfSections-1;
+    // secdim.push(section[i].getBoundingClientRect());
 
     // interactive nav items. 
     navitem[i].addEventListener("click", () => {
@@ -126,7 +131,18 @@ for (let i=0; i<numberOfSections; i++)
         {section[i].querySelector("p").style.display = "none";}
     });
 
+
 }
+// addAllFunctions();
+
+createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAllFunctions();
+createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAllFunctions();
+createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAllFunctions();
+createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAllFunctions();
+
+// var section = document.querySelector('#mainpage').lastElementChild.lastElementChild.lastElementChild; 
+// console.log(section);
+
 
 if (window.scrollY < 50)
 {header.style.backgroundColor = headerBackgroundColor;}
@@ -134,7 +150,7 @@ if (window.scrollY < 50)
 
 //  Second Additional Feature: 
 // Highlight the current section in the nav bar. 
-document.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
     
     // third Additional Feature: 
     // hidding the navbar while scrolling down. 
@@ -143,14 +159,32 @@ document.addEventListener("scroll", () => {
     else if (window.scrollY > 50)
     {header.style.backgroundColor = "rgb(0,0,0,0)";}
 
+    console.log(window.scrollY);
+
+    section =  document.querySelectorAll(".section");
+    navitem =  document.querySelectorAll(".nav-item");
+
     for (var i =0; i < numberOfSections; i++)
     {
-        navitem[i].style.backgroundColor = headerBackgroundColor;
-        if (window.scrollY > secdim[i].top && window.scrollY < secdim[i].bottom)
+        // secdim.push(section[i].getBoundingClientRect());
+        currentSecDim = section[i].getBoundingClientRect();
+        //console.log(currentSecDim);
+
+        // navitem[i].style.backgroundColor = headerBackgroundColor;
+
+        if (currentSecDim.top > 0 && currentSecDim.top < window.innerHeight)
         {
             navitem[i].style.backgroundColor = highlightNavItem;
-            break;
+            navitems.scrollTo(navitem[i]);
+            // window.scrollX(navitem[i]);
+
+            // break;
         }
+        else 
+        {
+            navitem[i].style.backgroundColor = headerBackgroundColor;
+        }
+        
     }
 });
 
@@ -161,6 +195,7 @@ var removeButton = document.querySelector('#removesection');
 
 addButton.addEventListener('click', () =>{
     createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
+    addAllFunctions();
 })
 
 removeButton.addEventListener('click', () =>{
