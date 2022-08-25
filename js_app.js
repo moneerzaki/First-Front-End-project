@@ -173,7 +173,7 @@ window.addEventListener("scroll", () => {
         // navitem[i].style.backgroundColor = headerBackgroundColor;
 
         // if (currentSecDim.top > 0 && currentSecDim.top < window.innerHeight)
-        if (currentSecDim.top > 0 && currentSecDim.bottom > 0)
+        if (currentSecDim.top > 0 && currentSecDim.bottom > 0 )
         {
             navitem[i].style.backgroundColor = highlightNavItem;
             navitems.scrollTo(navitem[i]);
