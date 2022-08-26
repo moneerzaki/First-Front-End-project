@@ -149,7 +149,7 @@ if (window.scrollY < 50)
 
 //  Second Additional Feature: 
 // Highlight the current section in the nav bar. 
-document.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
     
     // third Additional Feature: 
     // hidding the navbar while scrolling down. 
@@ -175,15 +175,15 @@ document.addEventListener("scroll", () => {
         if (currentSecDim.top > 0 && currentSecDim.bottom > 0 )
         {
             navitem[i].style.backgroundColor = highlightNavItem;
-            navitems.scrollTo(navitem[i]);
+            // navitems.scrollTo(navitem[i]);
             // window.scrollX(navitem[i]);
 
             // break;
         }
-        // else 
-        // {
-        //     navitem[i].style.backgroundColor = headerBackgroundColor;
-        // }
+        else 
+        {
+            navitem[i].style.backgroundColor = headerBackgroundColor;
+        }
         
     }
 });
