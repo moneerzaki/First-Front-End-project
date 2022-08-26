@@ -100,37 +100,36 @@ var createSectionMainPage = function(textin)
 var addAllFunctions = function()
 {
 
-section =  document.querySelectorAll(".section");
-navitem =  document.querySelectorAll(".nav-item");
+section =  document.querySelectorAll(".section"); 
+navitem =  document.querySelectorAll(".nav-item"); 
 
 
-//for (let i=0; i<numberOfSections; i++)
-    var i = numberOfSections-1;
-    // secdim.push(section[i].getBoundingClientRect());
+// for (let i=0; i<numberOfSections; i++) 
+    var i = numberOfSections-1; 
+    // secdim.push(section[i].getBoundingClientRect()); 
 
     // interactive nav items. 
-    navitem[i].addEventListener("click", () => {
-        // let diff = Math.abs(window.scrollY - sec1dim.top) + 100;
-        // window.scrollBy(0,-diff);
+    navitem[i].addEventListener("click", () => { 
+        // let diff = Math.abs(window.scrollY - sec1dim.top) + 100; 
+        // window.scrollBy(0,-diff); 
         
-        // window.scrollTo({top: sec1dim.top -100});
+        // window.scrollTo({top: sec1dim.top -100}); 
         // console.log(diff); 
-        // location.href = "#section1";
-        section[i].scrollIntoView();
+        // location.href = "#section1"; 
+        section[i].scrollIntoView(); 
         });
 
 
     // additional features: 
-    // First additional features
+    // First additional features 
 
     // collabsing the content of a section when clicking on its title. 
-    section[i].querySelector("h1").addEventListener("click",() =>{
-        if (section[i].querySelector("p").style.display == "none")
-        {section[i].querySelector("p").style.display = "block";}
+    section[i].querySelector("h1").addEventListener("click",() =>{ 
+        if (section[i].querySelector("p").style.display == "none") 
+        {section[i].querySelector("p").style.display = "block";} 
         else 
-        {section[i].querySelector("p").style.display = "none";}
-    });
-
+        {section[i].querySelector("p").style.display = "none";} 
+    }); 
 
 }
 // addAllFunctions();
@@ -150,7 +149,7 @@ if (window.scrollY < 50)
 
 //  Second Additional Feature: 
 // Highlight the current section in the nav bar. 
-window.addEventListener("scroll", () => {
+document.addEventListener("scroll", () => {
     
     // third Additional Feature: 
     // hidding the navbar while scrolling down. 
@@ -181,10 +180,10 @@ window.addEventListener("scroll", () => {
 
             // break;
         }
-        else 
-        {
-            navitem[i].style.backgroundColor = headerBackgroundColor;
-        }
+        // else 
+        // {
+        //     navitem[i].style.backgroundColor = headerBackgroundColor;
+        // }
         
     }
 });
