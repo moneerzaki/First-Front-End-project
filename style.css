@@ -295,6 +295,11 @@ nav ul li:last-child{
         margin-right: 20px;
         /* border: 1px solid yellow; */
     }
+
+    .section{
+        margin-top: 25vh;
+    }
+
     .section h1{
         cursor: pointer;
         font-size: 100px;
