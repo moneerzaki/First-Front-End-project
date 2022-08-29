@@ -185,7 +185,7 @@ nav ul li:last-child{
 
 .section{
     /* margin: 30px; */
-    background-color: rgb(94, 94, 94, 0.3);
+    background-color: #5e5e5e4d;
     padding: 20px;
     width: 80%;
     margin: auto;
@@ -203,7 +203,7 @@ nav ul li:last-child{
 
 
 .section:hover{
-    background-color: rgb(94, 94, 94, 0.8);
+    background-color: #5e5e5ecc;
 }
 
 .section h1{
@@ -227,19 +227,6 @@ nav ul li:last-child{
     text-indent: 50px;
 }
 
-
-
-
-.section_even{
-    text-align: right;
-}
-.section_even hr{
-    /* border: 1px solid black;  */
-    width: 50%;
-    margin-left: auto;
-    /* position: relative; */
-    /* float: right; */
-}
 
 
 .interbuttons{
@@ -274,23 +261,14 @@ nav ul li:last-child{
     height: var(--width-interactive-buttons);
     /* margin: var(--width-interactive-buttons)/5; */
     /* -webkit-box-reflect: below 0 linear-gradient( transparent, transparent, transparent, transparent, black); */
-
     /* transform: rotateY(40deg); */
     transition: 0.2s;
 }
 
 .interbuttons button:hover{
-    /* font-size: 40px; */
-    /* height: clac(var(--width-interactive-buttons)*1.5);  */
-    /* width: 120%; */
-    /* padding-top: 100%; */
-    /* transform: translateY(-10px); */
-    /* transform: rotateX(180deg); */
-    /* transform: rotateY(-40deg); */
-    /* transform: rotateZ(360deg); */
     transform: scale(1.2 , 1.2);
-
 }
+
 #addsection{
 
 }
@@ -307,4 +285,31 @@ nav ul li:last-child{
     :root{
         --width-interactive-buttons: 8vh;
     }
+    .nav-item{
+        font-size: 40px;
+        margin-right: 20px;
+        /* border: 1px solid yellow; */
+    }
+    .section h1{
+        cursor: pointer;
+        font-size: 100px;
+        /* letter-spacing: 3px;
+        font-weight: bold; */
+        /* margin-bottom: 40px;
+        margin-top: 40px; */
+    }
+    
+    .section hr{
+        /* border: 1px solid var(--fav-color);
+        width: 50%; */
+        margin-top: 30px; 
+        margin-bottom: 30px;
+    }
+    
+    
+    .section p{
+        font-size: 50px;
+        /* text-indent: 50px; */
+    }
+    
 }

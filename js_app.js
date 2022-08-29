@@ -140,7 +140,6 @@ createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAl
 createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAllFunctions();
 
 // var section = document.querySelector('#mainpage').lastElementChild.lastElementChild.lastElementChild; 
-// console.log(section);
 
 
 if (window.scrollY < 50)
@@ -158,11 +157,10 @@ window.addEventListener("scroll", () => {
     else if (window.scrollY > 50)
     {header.style.backgroundColor = "rgb(0,0,0,0)";}
 
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
 
     section =  document.querySelectorAll(".section");
     navitem =  document.querySelectorAll(".nav-item");
-
     for (var i =0; i < numberOfSections; i++)
     {
         // secdim.push(section[i].getBoundingClientRect());
@@ -172,9 +170,12 @@ window.addEventListener("scroll", () => {
         // navitem[i].style.backgroundColor = headerBackgroundColor;
 
         // if (currentSecDim.top > 0 && currentSecDim.top < window.innerHeight)
-        if (currentSecDim.top > 0 && currentSecDim.bottom > 0 )
+        // if (currentSecDim.top > 0 && currentSecDim.bottom > 0 )
+        if (currentSecDim.top < window.innerHeight/2  &&  currentSecDim.bottom > innerHeight/2)
+
         {
             navitem[i].style.backgroundColor = highlightNavItem;
+            section[i].style.backgroundColor = "#5e5e5ecc";
             // navitems.scrollTo(navitem[i]);
             // window.scrollX(navitem[i]);
 
@@ -183,6 +184,7 @@ window.addEventListener("scroll", () => {
         else 
         {
             navitem[i].style.backgroundColor = headerBackgroundColor;
+            section[i].style.backgroundColor = "#5e5e5e4d";
         }
         
     }
