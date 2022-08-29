@@ -59,6 +59,7 @@ header{
     background-image: linear-gradient(180deg,  var(--header-background-color1), var(--header-background-color2));
     color: var(--fav-color); 
     position:fixed;
+    z-index: 2;
     top:0px; 
 }
 
@@ -187,9 +188,10 @@ nav ul li:last-child{
     /* margin: 30px; */
     background-color: #5e5e5e4d;
     padding: 20px;
-    width: 80%;
+    width: 70%;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
+
 
 
     /* border: 1px solid black; */
@@ -199,8 +201,11 @@ nav ul li:last-child{
     /* -webkit-text-fill-color: transparent; */
 }
 
-
-
+.section_Active{
+    transition:ease-in-out 0.5s;
+    transform: scale(1.2);
+    background-color: #5e5e5ecc;
+}
 
 .section:hover{
     background-color: #5e5e5ecc;
@@ -208,9 +213,9 @@ nav ul li:last-child{
 
 .section h1{
     cursor: pointer;
-    font-size: 60px;
+    font-size: 50px;
     letter-spacing: 3px;
-    font-weight: bold;
+    font-weight: none;
     /* margin-bottom: 20px; */
 }
 
@@ -223,7 +228,7 @@ nav ul li:last-child{
 
 
 .section p{
-    font-size: 20px;
+    font-size: 15px;
     text-indent: 50px;
 }
 

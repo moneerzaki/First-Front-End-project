@@ -175,7 +175,8 @@ window.addEventListener("scroll", () => {
 
         {
             navitem[i].style.backgroundColor = highlightNavItem;
-            section[i].style.backgroundColor = "#5e5e5ecc";
+            // section[i].style.backgroundColor = "white";
+            section[i].classList.add("section_Active");
             // navitems.scrollTo(navitem[i]);
             // window.scrollX(navitem[i]);
 
@@ -183,8 +184,10 @@ window.addEventListener("scroll", () => {
         }
         else 
         {
+
             navitem[i].style.backgroundColor = headerBackgroundColor;
-            section[i].style.backgroundColor = "#5e5e5e4d";
+            // section[i].style.backgroundColor = "#5e5e5e4d";
+            section[i].classList.remove("section_Active");
         }
         
     }
