@@ -2,31 +2,31 @@
 /*global document,window,console*/
 
 // colors. 
-// var headerHeight = '10vh'; 
-// var favColor = '#8ddfff';
-var headerBackgroundColor = "#131313";
-var highlightNavItem = "#808080";
+// let headerHeight = '10vh'; 
+// let favColor = '#8ddfff';
+const headerBackgroundColor = "#131313";
+const highlightNavItem = "#808080";
 
 // random text. 
-var lorem1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum illo aspernatur quibusdam recusandae facere ipsum optio delectus possimus, nemo tenetur obcaecati repellendus, repudiandae, aut quidem pariatur quia soluta provident animi?";
+const lorem1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum illo aspernatur quibusdam recusandae facere ipsum optio delectus possimus, nemo tenetur obcaecati repellendus, repudiandae, aut quidem pariatur quia soluta provident animi?";
 
 
 // important variables: 
-var numberOfSections = 0; 
+let numberOfSections = 0; 
 
 // important elements: 
-var header = document.querySelector("header");
-var navitems = document.querySelector("#nav-items"); // unordered list for nav bar
-var navElements = [];  // IDs of each nav-item.
-var navitem;
+const header = document.querySelector("header");
+const navitems = document.querySelector("#nav-items"); // unordered list for nav bar
+let navElements = [];  // IDs of each nav-item.
+let navitem;
 
-var sections = document.querySelector("#sections"); // sections part in the main page.
-var sectionsMain = [];  // IDs of each section in the main page.
-var section;
-var secdim = [];
+const sections = document.querySelector("#sections"); // sections part in the main page.
+let sectionsMain = [];  // IDs of each section in the main page.
+let section;
+let secdim = [];
 
 // removing the last added section: 
-var removeLastSection = function ()
+const removeLastSection = function ()
 {
     numberOfSections--;
     navitems.removeChild(navitems.lastChild);
@@ -41,20 +41,20 @@ var removeLastSection = function ()
 
 }
 // main function for creating a new section. 
-var createNewSection = function(textin)
+const createNewSection = function(textin)
 {
-    var sectionNav = createSectionNavBar();
+    const sectionNav = createSectionNavBar();
     navitems.appendChild(sectionNav);
 
-    var sectionMain = createSectionMainPage(textin);
+    const sectionMain = createSectionMainPage(textin);
     sections.appendChild(sectionMain);
     
 }
 // function to create new nav item.
-var createSectionNavBar = function()
+const createSectionNavBar = function()
 {
     numberOfSections ++; 
-    var sectionNav = document.createElement("li");         // li 3
+    const sectionNav = document.createElement("li");         // li 3
     sectionNav.classList.add("nav-item");
     sectionNav.setAttribute("id","nav-item" + numberOfSections) ;
     sectionNav.textContent =   "Sect "+ numberOfSections ;
@@ -66,15 +66,15 @@ var createSectionNavBar = function()
     return sectionNav;
 }
 // function to create the section main text in the main page.
-var createSectionMainPage = function(textin)
+const createSectionMainPage = function(textin)
 {
-    var sectionheader = document.createElement("h1");      // h1
+    const sectionheader = document.createElement("h1");      // h1
     sectionheader.textContent = "Section " + numberOfSections + ":";
-    var sectionhr = document.createElement("hr");          // hr
-    var sectionp = document.createElement("p");            // p
+    const sectionhr = document.createElement("hr");          // hr
+    const sectionp = document.createElement("p");            // p
     sectionp.textContent = textin; 
 
-    var section = document.createElement("div");           // main div .section
+    const section = document.createElement("div");           // main div .section
     section.className= "section";
     section.setAttribute("id", "section"+numberOfSections);
 
@@ -97,7 +97,7 @@ var createSectionMainPage = function(textin)
 
 
 
-var addAllFunctions = function()
+const addAllFunctions = function()
 {
 
 section =  document.querySelectorAll(".section"); 
@@ -105,7 +105,7 @@ navitem =  document.querySelectorAll(".nav-item");
 
 
 // for (let i=0; i<numberOfSections; i++) 
-    var i = numberOfSections-1; 
+    let i = numberOfSections-1; 
     // secdim.push(section[i].getBoundingClientRect()); 
 
     // interactive nav items. 
@@ -116,7 +116,7 @@ navitem =  document.querySelectorAll(".nav-item");
         // window.scrollTo({top: sec1dim.top -100}); 
         // console.log(diff); 
         // location.href = "#section1"; 
-        section[i].scrollIntoView(); 
+        section[i].scrollIntoView({behavior:"smooth"}); 
         });
 
 
@@ -139,7 +139,7 @@ createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAl
 createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAllFunctions();
 createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); addAllFunctions();
 
-// var section = document.querySelector('#mainpage').lastElementChild.lastElementChild.lastElementChild; 
+// const section = document.querySelector('#mainpage').lastElementChild.lastElementChild.lastElementChild; 
 
 
 if (window.scrollY < 50)
@@ -161,7 +161,7 @@ window.addEventListener("scroll", () => {
 
     section =  document.querySelectorAll(".section");
     navitem =  document.querySelectorAll(".nav-item");
-    for (var i =0; i < numberOfSections; i++)
+    for (let i =0; i < numberOfSections; i++)
     {
         // secdim.push(section[i].getBoundingClientRect());
         currentSecDim = section[i].getBoundingClientRect();
@@ -195,8 +195,8 @@ window.addEventListener("scroll", () => {
 
 
 
-var addButton = document.querySelector('#addsection');
-var removeButton = document.querySelector('#removesection');
+const addButton = document.querySelector('#addsection');
+const removeButton = document.querySelector('#removesection');
 
 addButton.addEventListener('click', () =>{
     createNewSection(lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1+lorem1); 
