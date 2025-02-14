@@ -37,6 +37,7 @@ This project builds a multi-section landing page, with a dynamically updating na
 - You can add more sections using html file or js file. 
 - the website can appear in different devices with different screen resolutions which makes the website responsive. 
 
+![image](https://github.com/user-attachments/assets/a71eb4f2-c6a5-4706-b47d-255819382f2a)
 
 <a id='usage'></a>
 
